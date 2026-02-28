@@ -1,0 +1,15 @@
+models.py: This is where you define your database structure (the "M" in MTV).
+
+views.py: This contains the logic that handles requests and returns responses (the "V" in MTV).
+
+admin.py: A powerful shortcut that lets you register your models so you can manage data through Django's built-in admin interface.
+
+apps.py: Configuration settings specific to this app.
+
+tests.py: Where you write code to make sure your app works as expected.
+
+__init__.py: A tiny file that tells Python to treat this directory as a package.
+
+superuser
+admin
+pass_ admin
