@@ -24,6 +24,7 @@
         {% for task in tasks %}
             <li>
                 {{ task.title }} 
+                <a href="{% url 'delete_task' task.id %}" style="color: grey; margin-left: 10px;">[Delete]</a>
                 {% if task.completed %} 
                 <span class='completed'>(Done! ✅)</span> 
                 {% else %}
