@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('', views.task_list, name='task_list'),
     path('delete/<int:pk>/', views.delete_task, name='delete_task'), # New line
+    path('edit/<int:pk>',views.edit_task,name='edit_task'),
 ]
