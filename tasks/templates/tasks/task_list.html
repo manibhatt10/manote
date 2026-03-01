@@ -2,6 +2,15 @@
 <html>
 <head>
     <title>My To-Do List</title>
+    <style>
+        .pending{
+            color:red
+            font-weight:bold;
+        }
+        .completed{
+            color:green;
+        }
+    </style>
 </head>
 <body>
     <h1>My Tasks</h1>
@@ -9,7 +18,10 @@
         {% for task in tasks %}
             <li>
                 {{ task.title }} 
-                {% if task.completed %} (Done! ✅) {% else %} (Pending ⏳) {% endif %}
+                {% if task.completed %} 
+                <span class='completed'>(Done! ✅)</span> 
+                {% else %}
+                <span class='pending'>(Pending ⏳) </span> {% endif %}
             </li>
         {% endfor %}
     </ul>

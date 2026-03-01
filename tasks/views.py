@@ -4,7 +4,8 @@ from django.shortcuts import render
 from .models import Task
 
 def task_list(request):
-    tasks=Task.objects.all()  #fetches all from DB
+    #tasks=Task.objects.all()  #fetches all from DB
+    tasks=Task.objects.all().order_by('-created_at') #minus sign for descending order
     return render(request, 'tasks/task_list.html',{'tasks':tasks})
 '''Task.objects.all(): This is Django's ORM (Object-Relational Mapper) talking to the database for you.
 

@@ -1,0 +1,24 @@
+We've built a solid foundation today! 🧱 You've moved from an empty folder to a functioning Django app that displays data from a database.
+
+Here are your summary notes and some practice challenges to reinforce what we covered.
+
+---
+
+### Day 1 Summary: The Foundation 📝
+
+* **Environment**: We set up a virtual environment on Windows 11 to keep dependencies isolated.
+* **Project vs. App**: We created a Django **project** (`todo_project`) and a modular **app** (`tasks`).
+* **The Model**: We defined a `Task` class in `models.py` with `CharField`, `BooleanField`, and `DateTimeField`.
+* **Migrations**: We used `makemigrations` and `migrate` to sync our Python code with the SQLite database.
+* **Admin**: We registered our model in `admin.py` and created a superuser to manage data.
+* **MTV Flow**: We connected a **View** (logic), a **URL** (path), and a **Template** (HTML) to display tasks on the homepage.
+
+---
+
+### Self-Practice Challenges 🏋️‍♀️
+
+Try these three tasks to test your understanding of how the pieces fit together:
+
+1. **Add a Field**: Go to `tasks/models.py` and add a `description` field (use `models.TextField(blank=True)`) so you can add more details to a task. Remember, what two commands do you need to run after changing a model? 🚚
+2. **Logic Tweak**: In `tasks/views.py`, try to change the order of the tasks. Instead of `Task.objects.all()`, try `Task.objects.order_by('-created_at')`. What does that minus sign do to the list on your homepage? 🔄
+3. **Template Styling**: Open your HTML template and try adding a `style` tag in the `<head>` to change the color of the "Pending" text to red. 🎨
