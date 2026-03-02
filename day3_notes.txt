@@ -1,0 +1,2 @@
+CASCADE tells Django:
+ "If this user is deleted, automatically delete all the tasks that belong to them too.
