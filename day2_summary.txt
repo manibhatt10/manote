@@ -1,0 +1,9 @@
+The Full Cycle: We completed CRUD (Create, Read, Update, Delete) for your tasks.
+
+Dual-Form Architecture: We created TaskCreateForm and TaskUpdateForm to keep the homepage UI simple while allowing full editing on the edit page.
+
+Dynamic Views: We used get_object_or_404 to safely fetch specific tasks and instance=task to pre-fill forms for editing.
+
+URL Parameters: We learned how to pass a task's ID (pk) through the URL to identify which record to modify or remove.
+
+POST Requests: We mastered handling form submissions and using redirect to send users back to the homepage after an action.

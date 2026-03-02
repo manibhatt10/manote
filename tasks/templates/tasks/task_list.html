@@ -10,6 +10,10 @@
         .completed{
             color:green;
         }
+        .completed-task{
+            text-decoration: line-through;
+            color:grey;
+        }
     </style>
 </head>
 <body>
@@ -23,7 +27,13 @@
     <ul>
         {% for task in tasks %}
             <li>
-                {{ task.title }} 
+                
+    <span class="{% if task.completed %}completed-task{% endif %}">
+        {{ task.title }}
+    </span>
+    
+
+               
                 <a href="{% url 'edit_task' task.id %}">[Edit]</a>
                 <a href="{% url 'delete_task' task.id %}" style="color: grey; margin-left: 10px;">[Delete]</a>
                 {% if task.completed %} 

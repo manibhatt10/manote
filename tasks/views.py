@@ -36,7 +36,7 @@ def edit_task(request, pk):
         form=TaskUpdateForm(request.POST,instance=task)# 'instance=task' tells Django to update this specific record
         if form.is_valid():
             form.save()
-            return redirect('task_list')
+            return redirect('edit_task', pk=task.pk)
     else:
         form=TaskUpdateForm(instance=task)
     return render(request, 'tasks/edit_task.html', {'form': form, 'task': task})
