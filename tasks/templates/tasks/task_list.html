@@ -17,7 +17,23 @@
     </style>
 </head>
 <body>
+    <p>
+    Hello, {{ user.username }}! 
+    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Log Out</button>
+    </form>
+</p>
+<hr>
     <h1>My Tasks</h1>
+    <p>
+    Hello, **{{ user.username }}**! 
+    <form action="{% url 'logout' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">Log Out</button>
+    </form>
+</p>
+<hr>
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
